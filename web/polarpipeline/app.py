@@ -116,9 +116,9 @@ def filesearchbegin():
                     except:
                         columnType[col] = str
     #DO COMPARISONS
-    command = 'rm *_filesearch_result.tsv'
+    command = 'rm f/usr/src/app/polarpipeline/static/*_filesearch_result.tsv'
     os.system(command)
-    with open(searchname, 'w') as opened:
+    with open(f'/usr/src/app/polarpipeline/static/{searchname}', 'w') as opened:
         opened.write(header)
         foundHeader = False
         for row in open(file, 'r'):
@@ -170,9 +170,9 @@ def filesearchbegin():
 @app.route('/filesearch/preview')
 def filesearchpreview():
     file = ''
-    for thing in os.listdir():
+    for thing in os.listdir('polarpipeline/static'):
         if thing.endswith('_filesearch_result.tsv'):
-            file = thing
+            file = 'polarpipeline/static/' + thing
             break
     first = True
     filename = ''
@@ -196,9 +196,10 @@ def filesearchpreview():
 def filesearchdownload():
     print('in download')
     filename=''
-    for file in os.listdir():
+    print(os.listdir('polarpipeline/static/'))
+    for file in os.listdir('polarpipeline/static/'):
         if file.endswith('_filesearch_result.tsv'):
-            filename = file
+            filename = 'static/' + file
     return send_file(filename, as_attachment=True)
 
 @app.route('/figuregenerator')
