@@ -45,9 +45,14 @@ To deploy the web application, follow these steps:
    ```
 3. Run the container:
    ```bash
-   docker compose up
+   docker compose up -d
    ```
 4. Access the web application in your browser: [http://localhost:5001](http://localhost:5001)
+
+5. Stop the webapp using:
+   ```bash
+   docker compose down
+   ```
 
 ### Usage
 
