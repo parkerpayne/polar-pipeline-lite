@@ -36,8 +36,8 @@ To deploy the web application, follow these steps:
 
 1. Download the repository as a zip or clone this repository:
    ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone https://github.com/parkerpayne/polar-pipeline-lite
+   cd polar-pipeline-lite
    ```
 2. In a terminal (PowerShell in Windows) build the Docker container:
    ```bash
