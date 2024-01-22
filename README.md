@@ -30,7 +30,7 @@ To deploy the web application, follow these steps:
 
 ### Prerequisites
 
-- Install Docker and Docker Compose on your system: [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
+- Install Docker on your system: [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
 
 ### Build and Run
 
