@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ID Generator - Polar Pipeline</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <style>
+        .navbar {
+            background-color: #333;
+        }
+        
+        .navbar .nav-link {
+            color: #ddd;
+        }
+        
+        .navbar .nav-link:hover {
+            color: #fff;
+        }
+        
+        .centered-ui {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+        }
+        
+        .btn-submit {
+            background-color: #007bff;
+            color: #fff;
+        }
+        
+        .btn-submit:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+        
+        .centered-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+        .btn {
+            border-radius: 10px;
+        }
+        .btn-uploading {
+            background-color: #dc3545 !important;
+            color: #fff;
+        }
+        .sticky-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0; /* Adjust the desired top offset */
+            z-index: 1000; /* Adjust the z-index as needed */
+            background-color: #fff; /* Set a background color if needed */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand">Polar Pipeline</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('filesearchbrowse') }}">File Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('figuregenerator') }}">Protein Figures</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="centered-ui">
+        <div class="row">
+            <a class="btn btn-primary" href="{{ url_for('filesearchbrowse') }}" style="margin-right:2rem;">File Search</a>
+            <a class="btn btn-primary" href="{{ url_for('figuregenerator') }}">Figure Generator</a>
+        </div>
+        
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
